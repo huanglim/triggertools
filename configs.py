@@ -4,6 +4,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 class Config(object):
 
     IP = '9.112.57.146'
+    # IP = '9.112.56.150'
     PORT = 4444
     WAITSEC = 15
     IS_REMOTE = True
@@ -15,7 +16,11 @@ class Config(object):
     INVALID_VALUES = ['n/a', 'none,', 'na', '']
     DEFAULT_DIR = '/home/seluser/Downloads/'
 
-    DB_DBNAME = "megabot_db"
+    MAIL_SERVER = os.environ.get('MAIL_SERVER', 'd25ml01.ibm.com')
+    REQUEST_DBNAME = "megabot_request"
+    USER_DBNAME = "megabot_user"
+    MAIL_DBNAME ='megabot_mail'
+    SCHEDULE_DB_NAME = 'megabot_schedule'
     DB_USERNAME = '0d0ab079-7631-442d-8355-a466779cb63d-bluemix'
     DB_PASSWORD = '45e643fcad1755a4828ff390196db82cb01d480537d99367cfbeaa3f39acddf5'
     DB_URL = 'https://0d0ab079-7631-442d-8355-a466779cb63d-bluemix:' \
