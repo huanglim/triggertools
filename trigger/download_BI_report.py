@@ -19,7 +19,6 @@ logging.basicConfig(level=logging.INFO,
                     filemode='w'
     )
 
-
 def download_report(request,
                     dir_name,
                     host=config.IP,
