@@ -1,5 +1,6 @@
 import logging
 import smtplib
+import os
 from time import sleep
 from utils.mk_dir import mk_dir
 from db import Cloundant_NoSQL_DB
@@ -9,18 +10,16 @@ from trigger.download_BI_report import download_report
 from email.mime.text import MIMEText
 logging.basicConfig(level=logging.INFO)
 
-def mkdir(user, ip):
+def mkdir(user):
     # make up the dirctory in selenium server to store the report for user
     # and return the dirctory name
-    try:
-        dir_name = mk_dir(user, ip)
-    except Exception as e:
-        logging.error('error occurred in the make dir %s' %e)
-        raise
+    dir_name = os.path.join(config.DEFAULT_DIR, user)
+    if not os.path.exists(dir_name):
+        output = os.popen('mkdir {}'.format(dir_name))
+        logging.info('create dir, the result is {}'.format(output))
     return dir_name
 
 def send_mail(record):
-
 
     msg = MIMEText(
         'You are receiving an email to confirm the access request for {}. The linke is : \n {}'.format(record['requester'],record['confirm_link'])
@@ -47,9 +46,10 @@ def trigger_request(db):
         if requests:
             for request in requests:
                 user = request['user']
-                dir_name = mkdir(user, config.IP)
+                dir_name = mkdir(user)
 
                 #process with the selenium function
+                logging.info('Procsss record for user {}'.format(user))
                 status, msg = download_report(request, dir_name)
 
                 if status:
@@ -59,7 +59,7 @@ def trigger_request(db):
                     logging.error('the process is failed, status is {}, msg is {}'\
                                   .format(status, msg))
         # sleep for seconds
-        sleep(10)
+        sleep(60)
 
 def trigger_mail(db):
 
@@ -84,7 +84,7 @@ def trigger_mail(db):
                         db.mark_mail_status(record)
 
         # sleep for seconds
-        sleep(10)
+        sleep(60)
 
 if __name__ == "__main__":
     funcs = [trigger_mail, trigger_request]

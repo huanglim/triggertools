@@ -82,8 +82,8 @@ def set_environment(hostname='', value=1):
 
     # connect to host
     try:
-        ssh.connect(hostname=hostname, port=22, username='seluser', password='seluser')
-    except Exception as e:
+        ssh.connect(hostname=hostname, port=22, username='tst', password='tsttsttst')
+    except TimeoutError as e:
         raise
     else:
         stdin, stdout, stderr = ssh.exec_command('ls')
@@ -97,4 +97,4 @@ def set_environment(hostname='', value=1):
 
 if __name__ == '__main__':
     # trigger_send_to_ftpserver(HOSTNAME)
-    set_environment(hostname='9.112.57.146')
+    set_environment(hostname='9.112.56.150')

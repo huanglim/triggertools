@@ -3,7 +3,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
 
-    IP = '9.112.57.146'
+    IP = '9.110.24.227'
     # IP = '9.112.56.150'
     PORT = 4444
     WAITSEC = 15
@@ -14,7 +14,7 @@ class Config(object):
     PASSWORD = os.environ.get('USER_PASSWORD')
 
     INVALID_VALUES = ['n/a', 'none,', 'na', '']
-    DEFAULT_DIR = '/home/seluser/Downloads/'
+    DEFAULT_DIR = '/dev/shm/'
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'd25ml01.ibm.com')
     REQUEST_DBNAME = "megabot_request"
