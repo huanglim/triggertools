@@ -82,7 +82,6 @@ def trigger_mail(db):
                         raise
                     else:
                         db.mark_mail_status(record)
-
         # sleep for seconds
         sleep(60)
 

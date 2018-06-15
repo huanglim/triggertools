@@ -1,0 +1,5 @@
+watson-developer-cloud
+selenium>=3.8.1
+openpyxl>=2.4.1
+paramiko==2.4.0
+cloudant
