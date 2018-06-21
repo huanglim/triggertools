@@ -10,7 +10,16 @@ from threading import Thread
 from trigger.download_BI_report import download_report
 
 from utils.mk_dir import mkdir
+
+from email import encoders
+from email.header import Header
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email.mime.multipart import MIMEMultipart
+from email.utils import parseaddr, formataddr
+
+from configs import config
+
 logging.basicConfig(level=logging.INFO)
 
 class MyRequest(object):
@@ -60,8 +69,36 @@ def update_request(request):
         raise Exception
 
 def sendmail(request):
-    print('sending email!')
-    pass
+
+    msg = MIMEMultipart()
+    msg['From'] = config.MAIL_SENDER
+    msg['To'] = request.request['user']
+    msg['Subject'] = config.MAIL_SUBJECT
+
+    # add MIMEText:
+    msg.attach(MIMEText('Hi, Thanks for using Megabot. Please find your report in the attachement',
+                        'plain', 'utf-8'))
+
+    # add file:
+    dir = os.path.join(config.DEFAULT_DIR, request.request['user'])
+
+    for _, _, files in os.walk(dir):
+        for pos, file in enumerate(files):
+            with open(os.path.join(dir, file), 'rb') as f:
+                mime = MIMEBase('text', 'csv', filename=file)
+                mime.add_header('Content-Disposition', 'attachment', filename=file)
+                mime.add_header('Content-ID', '<{}>'.format(pos))
+                mime.add_header('X-Attachment-Id', '{}'.format(pos))
+                mime.set_payload(f.read())
+                encoders.encode_base64(mime)
+                msg.attach(mime)
+                
+                os.remove(os.path.join(dir, file))
+
+    server = smtplib.SMTP(config.MAIL_SERVER)
+    server.set_debuglevel(1)
+    server.sendmail(msg['From'], [msg['To']], msg.as_string())
+    server.quit()
 
 class Worker(Thread):
     def __init__(self, func, in_queue, out_queue):

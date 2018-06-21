@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../megabot/.idea/megabot.iml" filepath="$PROJECT_DIR$/../megabot/.idea/megabot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../practise/testing/.idea/testing.iml" filepath="$PROJECT_DIR$/../../practise/testing/.idea/testing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/trigger-report.iml" filepath="$PROJECT_DIR$/.idea/trigger-report.iml" />
     </modules>
   </component>

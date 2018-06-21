@@ -17,6 +17,9 @@ class Config(object):
     DEFAULT_DIR = '/dev/shm/'
 
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'd25ml01.ibm.com')
+    MAIL_SENDER = 'apdb2@au.ibm.com'
+    MAIL_SUBJECT = 'Megabot report'
+
     REQUEST_DBNAME = "megabot_request"
     USER_DBNAME = "megabot_user"
     MAIL_DBNAME ='megabot_mail'
