@@ -3,7 +3,6 @@ import smtplib
 import os
 from time import sleep
 from queue import Queue
-from utils.mk_dir import mk_dir
 from db import Cloundant_NoSQL_DB
 from configs import config
 from threading import Thread
