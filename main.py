@@ -8,16 +8,18 @@ from configs import config
 from threading import Thread
 from trigger.download_BI_report import download_report
 from email.mime.text import MIMEText
+
+from utils.mk_dir import mkdir
 logging.basicConfig(level=logging.INFO)
 
-def mkdir(user):
-    # make up the dirctory in selenium server to store the report for user
-    # and return the dirctory name
-    dir_name = os.path.join(config.DEFAULT_DIR, user)
-    if not os.path.exists(dir_name):
-        output = os.popen('mkdir {}'.format(dir_name))
-        logging.info('create dir, the result is {}'.format(output))
-    return dir_name
+# def mkdir(user):
+#     # make up the dirctory in selenium server to store the report for user
+#     # and return the dirctory name
+#     dir_name = os.path.join(config.DEFAULT_DIR, user)
+#     if not os.path.exists(dir_name):
+#         output = os.popen('mkdir {}'.format(dir_name))
+#         logging.info('create dir, the result is {}'.format(output))
+#     return dir_name
 
 def send_mail(record):
 

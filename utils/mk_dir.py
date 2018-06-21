@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+import os
 import paramiko
 from configs import config
 
@@ -30,4 +31,14 @@ def mk_dir(username, hostname):
     # close the connection
     ssh.close()
 
+    return dir_name
+
+def mkdir(user):
+    # make up the dirctory in selenium server to store the report for user
+    # and return the dirctory name
+    logging.info('in make dir')
+    dir_name = os.path.join(config.DEFAULT_DIR, user)
+    if not os.path.exists(dir_name):
+        output = os.popen('mkdir {}'.format(dir_name))
+        logging.info('create dir, the result is {}'.format(output))
     return dir_name

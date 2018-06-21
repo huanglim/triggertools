@@ -37,7 +37,7 @@ def mk_dir(username, hostname):
 
     return dir_name
 
-def trigger_send_to_ftpserver(hostname):
+def send_to_ftpserver(hostname, fn):
         # setup a SSHClient object
     ssh = paramiko.SSHClient()
 
@@ -46,31 +46,13 @@ def trigger_send_to_ftpserver(hostname):
 
     # connect to host
     try:
-        ssh.connect(hostname=hostname, port=22, username='seluser', password='seluser')
+        ssh.connect(hostname=hostname, port=22, username='tst', password='tsttsttst')
     except Exception as e:
         raise
-
-        # execute the command
-    dir_name = '/home/seluser/Downloads/'
-
-    try:
-        logging.debug('change dir')
-        stdin, stdout, stderr = ssh.exec_command('cd '+ dir_name+'&& pwd')
-        for line in stdout:
-            print(line)
-
-    except Exception as e:
-        logging.error(e)
     else:
-        logging.debug('process send to ftp')
-        stdin, stdout, stderr = ssh.exec_command('python3 /opt/bin/send_to_ftp.py')
-        for line in stdout:
-            print(line)
+        sftp = paramiko.SFTPClient.from_transport(ssh)
+        sftp.put(fn)
 
-        for line in stderr:
-            print(line)
-        logging.debug('end send to ftp')
-    # close the connection
     ssh.close()
 
 def set_environment(hostname='', value=1):
@@ -97,4 +79,5 @@ def set_environment(hostname='', value=1):
 
 if __name__ == '__main__':
     # trigger_send_to_ftpserver(HOSTNAME)
-    set_environment(hostname='9.112.56.150')
+    # set_environment(hostname='9.112.56.150')
+    send_to_ftpserver('9.112.56.150', )

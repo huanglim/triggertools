@@ -32,7 +32,7 @@ class Cloundant_NoSQL_DB(object):
         selector = {"status":{"$eq":query_status}}
         return self.database.get_query_result(selector)
 
-    def mark_status(self, doc, to_status='triggered'):
+    def mark_status(self, doc, to_status='processed'):
         self.database = CloudantDatabase(self.client, config.REQUEST_DBNAME)
         remote_doc = Document(self.database, doc['_id'])
         remote_doc.update_field(
@@ -43,11 +43,11 @@ class Cloundant_NoSQL_DB(object):
         remote_doc.update_field(
             # action=remote_doc.list_field_append,
             action=remote_doc.field_set,
-            field='triggered time',
+            field='process time',
             value=time.ctime()
         )
 
-    def mark_mail_status(self, doc, to_status='triggered'):
+    def mark_mail_status(self, doc, to_status='processed'):
         self.database = CloudantDatabase(self.client, config.MAIL_DBNAME)
         remote_doc = Document(self.database, doc['_id'])
         remote_doc.update_field(
@@ -58,7 +58,7 @@ class Cloundant_NoSQL_DB(object):
         remote_doc.update_field(
             # action=remote_doc.list_field_append,
             action=remote_doc.field_set,
-            field='triggered time',
+            field='process time',
             value=time.ctime()
         )
 
