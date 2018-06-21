@@ -95,6 +95,9 @@ if __name__ == '__main__':
 
     db = Cloundant_NoSQL_DB()
     while True:
-        for request in get_requests(db):
-            logging.info(request)
+        for r in get_requests(db):
+            logging.info(r)
+            request = MyRequest(r)
             get_request_queue.put(request)
+
+        sleep(300)
