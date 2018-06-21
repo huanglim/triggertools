@@ -51,6 +51,7 @@ def download_request(request):
     logging.info('Procsss record for user {}'.format(user))
     try:
         request.status, request.msg = download_report(request.request, request.dirname)
+        logging.info('The reuslt is {}, msg is {}'.format(request.status, request.msg))
     except Exception as e:
         raise
     else:
@@ -58,6 +59,7 @@ def download_request(request):
 
 def update_request(request):
 
+    logging.info('in update request')
     db = Cloundant_NoSQL_DB()
     if request.status:
         db.mark_status(request.request)
@@ -70,6 +72,7 @@ def update_request(request):
 
 def sendmail(request):
 
+    logging.info('in send mail function')
     msg = MIMEMultipart()
     msg['From'] = config.MAIL_SENDER
     msg['To'] = request.request['user']
