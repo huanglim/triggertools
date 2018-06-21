@@ -92,11 +92,13 @@ def sendmail(request):
                 mime.set_payload(f.read())
                 encoders.encode_base64(mime)
                 msg.attach(mime)
-                
-                os.remove(os.path.join(dir, file))
+                try:
+                    os.remove(os.path.join(dir, file))
+                except Exception:
+                    logging.error('Error on remove file {}'.format(os.path.join(dir, file)))
 
     server = smtplib.SMTP(config.MAIL_SERVER)
-    server.set_debuglevel(1)
+    # server.set_debuglevel(1)
     server.sendmail(msg['From'], [msg['To']], msg.as_string())
     server.quit()
 
