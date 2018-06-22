@@ -10,9 +10,7 @@
       <change beforePath="$PROJECT_DIR$/../megabot/app/templates/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/templates/task.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../megabot/app/utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../megabot/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/downloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mailsender.py" beforeDir="false" afterPath="$PROJECT_DIR$/mailsender.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloader.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="downloader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/downloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1576">
-              <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+            <state relative-caret-position="264">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mailsender.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mailsender.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -50,15 +60,21 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="70" column="28" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="28" />
+            <state relative-caret-position="277">
+              <caret line="120" column="32" lean-forward="true" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
               <folding>
-                <element signature="e#0#36#0" expanded="true" />
                 <element signature="e#300#473#0" />
                 <element signature="e#530#829#0" />
+                <element signature="e#889#1064#0" />
+                <element signature="e#1128#1303#0" />
+                <element signature="e#1228#1281#0" />
                 <element signature="e#1129#1301#0" />
+                <element signature="e#1366#1831#0" />
+                <element signature="e#2313#2578#0" />
+                <element signature="e#2621#3804#0" />
+                <element signature="e#3138#3324#0" />
+                <element signature="e#3239#3318#0" />
                 <element signature="e#1901#2363#0" />
-                <element signature="e#2402#2426#0" />
                 <element signature="e#2459#2502#0" />
               </folding>
             </state>
@@ -143,15 +159,15 @@
         <option value="$PROJECT_DIR$/../megabot/app/utility.py" />
         <option value="$PROJECT_DIR$/../megabot/app/main/views.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/mailsender.py" />
         <option value="$PROJECT_DIR$/configs.py" />
         <option value="$PROJECT_DIR$/../../practise/testing/1.py" />
         <option value="$PROJECT_DIR$/db/__init__.py" />
         <option value="$PROJECT_DIR$/downloader.py" />
+        <option value="$PROJECT_DIR$/mailsender.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="678" />
     <option name="y" value="187" />
     <option name="width" value="1395" />
@@ -321,13 +337,13 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.3170068" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.3170068" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.3170068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -737,16 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mailsender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1931522734/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2007">
@@ -778,26 +784,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/downloader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="70" column="28" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="28" />
+        <state relative-caret-position="277">
+          <caret line="120" column="32" lean-forward="true" selection-start-line="120" selection-start-column="32" selection-end-line="120" selection-end-column="32" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
             <element signature="e#300#473#0" />
             <element signature="e#530#829#0" />
+            <element signature="e#889#1064#0" />
+            <element signature="e#1128#1303#0" />
+            <element signature="e#1228#1281#0" />
             <element signature="e#1129#1301#0" />
+            <element signature="e#1366#1831#0" />
+            <element signature="e#2313#2578#0" />
+            <element signature="e#2621#3804#0" />
+            <element signature="e#3138#3324#0" />
+            <element signature="e#3239#3318#0" />
             <element signature="e#1901#2363#0" />
-            <element signature="e#2402#2426#0" />
             <element signature="e#2459#2502#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/downloader.py">
+    <entry file="file://$PROJECT_DIR$/mailsender.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1576">
-          <caret line="133" lean-forward="true" selection-start-line="133" selection-end-line="133" />
+        <state relative-caret-position="1224">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

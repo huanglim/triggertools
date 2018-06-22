@@ -29,8 +29,10 @@ class MyRequest(object):
         self.status = None
         self.msg = ''
 
-def get_requests(db):
+def get_requests():
+
     logging.info('in get requests')
+    db = Cloundant_NoSQL_DB()
     try:
         requests = []
         requests_rq = db.query_request_db()
@@ -38,9 +40,11 @@ def get_requests(db):
         requests.extend(requests_sc)
         requests.extend(requests_rq)
     except Exception as e:
-        raise
+        logging.error(e)
     else:
         return requests
+    finally:
+        db.db_disconnect()
 
 def download_request(request):
 
@@ -141,9 +145,8 @@ if __name__ == '__main__':
     for thread in threads:
         thread.start()
 
-    db = Cloundant_NoSQL_DB()
     while True:
-        for r in get_requests(db):
+        for r in get_requests():
             logging.info(r)
             request = MyRequest(r)
             get_request_queue.put(request)

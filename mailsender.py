@@ -31,6 +31,8 @@ def trigger_mail(db):
     logging.info('start func trigger_mail')
     # loop for checking remote
     while True:
+
+        db = Cloundant_NoSQL_DB()
         # get submitted requests from remote database
         try:
             mail_records = db.query_mail_db()
@@ -46,14 +48,20 @@ def trigger_mail(db):
                     except Exception as e:
                         logging.error(e)
                     else:
-                        db.mark_mail_status(record)
+                        try:
+                            db.mark_mail_status(record)
+                        except Exception as e:
+                            logging.error(e)
+        finally:
+            db.db_disconnect()
+
         # sleep for seconds
         sleep(120)
 
 if __name__ == "__main__":
     # funcs = [trigger_mail, trigger_request]
 
-    db = Cloundant_NoSQL_DB()
+
     # for func in funcs:
     #     thr = Thread(target=func, args=(db,))
     #     thr.start()
