@@ -26,7 +26,7 @@ def send_mail(record):
     s.send_message(msg)
     s.quit()
 
-def trigger_mail(db):
+def trigger_mail():
 
     logging.info('start func trigger_mail')
     # loop for checking remote
@@ -66,4 +66,4 @@ if __name__ == "__main__":
     #     thr = Thread(target=func, args=(db,))
     #     thr.start()
 
-    trigger_mail(db)
+    trigger_mail()
