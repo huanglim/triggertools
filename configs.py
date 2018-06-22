@@ -23,7 +23,7 @@ class Config(object):
     REQUEST_DBNAME = "megabot_request"
     USER_DBNAME = "megabot_user"
     MAIL_DBNAME ='megabot_mail'
-    SCHEDULE_DB_NAME = 'megabot_schedule'
+    SCHEDULE_DBNAME = 'megabot_schedule'
     DB_USERNAME = '0d0ab079-7631-442d-8355-a466779cb63d-bluemix'
     DB_PASSWORD = '45e643fcad1755a4828ff390196db82cb01d480537d99367cfbeaa3f39acddf5'
     DB_URL = 'https://0d0ab079-7631-442d-8355-a466779cb63d-bluemix:' \

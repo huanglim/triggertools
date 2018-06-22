@@ -32,7 +32,11 @@ class MyRequest(object):
 def get_requests(db):
     logging.info('in get requests')
     try:
-        requests = db.query_db()
+        requests = []
+        requests_rq = db.query_request_db()
+        requests_sc = db.query_schedule_db()
+        requests.extend(requests_sc)
+        requests.extend(requests_rq)
     except Exception as e:
         raise
     else:
@@ -61,7 +65,10 @@ def update_request(request):
     logging.info('in update request')
     db = Cloundant_NoSQL_DB()
     if request.status:
-        db.mark_status(request.request)
+        if request.request.get('schedule cycle'):
+            db.update_schedule_task(request.request)
+        else:
+            db.mark_request_status(request.request)
         return request
     else:
         # notify user or retry
