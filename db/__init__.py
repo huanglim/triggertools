@@ -7,6 +7,7 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from pprint import pprint
 from configs import config
+import logging
 
 class Cloundant_NoSQL_DB(object):
     def __init__(self):
@@ -69,37 +70,58 @@ class Cloundant_NoSQL_DB(object):
         )
 
     def update_schedule_task(self, doc):
-        self.database = CloudantDatabase(self.client, config.REQUEST_DBNAME)
+        self.database = CloudantDatabase(self.client, config.SCHEDULE_DBNAME)
         remote_doc = Document(self.database, doc['_id'])
-        old_start_date = datetime.strptime(remote_doc['Weekending Date Range Start date'],'%Y-%m-%d')
-        old_end_date = datetime.strptime(remote_doc['Weekending Date Range End date'],'%Y-%m-%d')
-        old_run_date = datetime.strptime(remote_doc['run date'],'%Y-%m-%d')
+        logging.info(remote_doc)
+        old_start_date = datetime.strptime(doc['Weekending Date Range Start date'],'%Y-%m-%d')
+        old_end_date = datetime.strptime(doc['Weekending Date Range End date'],'%Y-%m-%d')
 
-        if remote_doc['schedule cycle'] == 'weekly':
+        if doc['schedule cycle'] == 'weekly':
             new_start_date = old_start_date + relativedelta(weeks=1)
             new_end_date = old_end_date + relativedelta(weeks=1)
-            new_run_date = old_run_date + relativedelta(weeks=1)
-        elif remote_doc['schedule cycle'] == 'monthly':
+            new_run_date = datetime.today() + relativedelta(weeks=1)
+        elif doc['schedule cycle'] == 'monthly':
             new_start_date = old_start_date + relativedelta(months=1)
             new_end_date = old_end_date + relativedelta(months=1)
-            new_run_date = old_run_date + relativedelta(months=1)
+            new_run_date = datetime.today() + relativedelta(months=1)
+        #
+        # remote_doc.field_set(remote_doc,
+        #                      'Weekending Date Range Start date',
+        #                      new_start_date.strftime('%Y-%m-%d')
+        #                      )
+        #
+        # remote_doc.field_set(remote_doc,
+        #                      'Weekending Date Range End date',
+        #                      new_end_date.strftime('%Y-%m-%d')
+        #                      )
+        #
+        # remote_doc.field_set(remote_doc,
+        #                      'run date',
+        #                      new_run_date.strftime('%Y-%m-%d')
+        #                      )
 
         remote_doc.update_field(
             action=remote_doc.field_set,
             field='Weekending Date Range Start date',
-            value=new_start_date
+            value=new_start_date.strftime('%Y-%m-%d')
         )
 
         remote_doc.update_field(
             action=remote_doc.field_set,
             field='Weekending Date Range End date',
-            value=new_end_date
+            value=new_end_date.strftime('%Y-%m-%d')
         )
 
         remote_doc.update_field(
             action=remote_doc.field_set,
             field='run date',
-            value=new_run_date
+            value=new_run_date.strftime('%Y-%m-%d')
+        )
+
+        remote_doc.update_field(
+            action=remote_doc.field_set,
+            field='last run date',
+            value=datetime.today().strftime('%Y-%m-%d')
         )
 
     def mark_mail_status(self, doc, to_status='processed'):

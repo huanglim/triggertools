@@ -131,6 +131,12 @@ class Worker(Thread):
 
 if __name__ == '__main__':
 
+    # db = Cloundant_NoSQL_DB()
+    # for request in get_requests():
+    #     request = MyRequest(request)
+    #     request.status = True
+    #     update_request(request)
+
     get_request_queue = Queue()
     download_request_queue = Queue()
     update_request_queue = Queue()
