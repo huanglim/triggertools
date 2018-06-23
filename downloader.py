@@ -19,7 +19,12 @@ from email.utils import parseaddr, formataddr
 
 from configs import config
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s [line:%(lineno)d] %(levelname)s %(message)s',
+                    datefmt='%a, %d %b %Y %H:%M:%S',
+                    #filename='app.log',
+                    filemode='w'
+    )
 
 class MyRequest(object):
 
@@ -126,8 +131,12 @@ class Worker(Thread):
     def run(self):
         while True:
             item = self.in_queue.get()
-            result = self.func(item)
-            self.out_queue.put(result)
+            try:
+                result = self.func(item)
+            except Exception as e:
+                logging.error(e)
+            else:
+                self.out_queue.put(result)
 
 if __name__ == '__main__':
 
@@ -152,9 +161,14 @@ if __name__ == '__main__':
         thread.start()
 
     while True:
-        for r in get_requests():
-            logging.info(r)
-            request = MyRequest(r)
-            get_request_queue.put(request)
+        try:
+            requests = get_requests()
+        except Exception as e:
+            logging.error(e)
+        else:
+            for r in requests:
+                logging.info(r)
+                request = MyRequest(r)
+                get_request_queue.put(request)
 
         sleep(300)

@@ -30,40 +30,37 @@ def trigger_mail():
 
     logging.info('start func trigger_mail')
     # loop for checking remote
-    while True:
 
-        db = Cloundant_NoSQL_DB()
-        # get submitted requests from remote database
-        try:
-            mail_records = db.query_mail_db()
-        except Exception as e:
-            logging.error(e)
-        else:
-            # if has submitted request, loop the requests to process them
-            if mail_records:
-                for record in mail_records:
+    db = Cloundant_NoSQL_DB()
+    # get submitted requests from remote database
+    try:
+        mail_records = db.query_mail_db()
+    except Exception as e:
+        logging.error(e)
+    else:
+        # if has submitted request, loop the requests to process them
+        if mail_records:
+            for record in mail_records:
+                try:
+                    logging.info('Process record. for {}'.format(record['confirm_link']))
+                    send_mail(record)
+                except Exception as e:
+                    logging.error(e)
+                else:
                     try:
-                        logging.info('Process record. for {}'.format(record['confirm_link']))
-                        send_mail(record)
+                        db.mark_mail_status(record)
                     except Exception as e:
                         logging.error(e)
-                    else:
-                        try:
-                            db.mark_mail_status(record)
-                        except Exception as e:
-                            logging.error(e)
-        finally:
-            db.db_disconnect()
+    finally:
+        db.db_disconnect()
 
-        # sleep for seconds
-        sleep(120)
 
 if __name__ == "__main__":
-    # funcs = [trigger_mail, trigger_request]
 
+    while True:
+        try:
+            trigger_mail()
+        except Exception as e:
+            logging.error(e)
 
-    # for func in funcs:
-    #     thr = Thread(target=func, args=(db,))
-    #     thr.start()
-
-    trigger_mail()
+        sleep(120)
