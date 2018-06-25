@@ -36,7 +36,7 @@ class MyRequest(object):
 
 def get_requests():
 
-    logging.info('in get requests')
+    logging.debug('in get requests')
     db = Cloundant_NoSQL_DB()
     try:
         requests = []
