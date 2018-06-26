@@ -25,10 +25,10 @@ def show_log(func):
 
     @functools.wraps(func)
     def wrapper(*arg, **kw):
-        logging.info('The section %s is starting' %(func.__name__))
+        logging.debug('The section %s is starting' %(func.__name__))
         res = func(*arg, **kw)
         time.sleep(1)
-        logging.info('The section %s is complete'%(func.__name__))
+        logging.debug('The section %s is complete'%(func.__name__))
         return res
     return wrapper
 
