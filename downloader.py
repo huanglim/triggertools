@@ -16,7 +16,7 @@ from email.mime.multipart import MIMEMultipart
 
 from configs import config
 
-logging.basicConfig(level=logging.DEBUG,
+logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s [line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
                     #filename='app.log',
@@ -140,14 +140,18 @@ def send_via_mail(request):
     server.quit()
 
 def send_downloaded_file(request):
-    try:
-        logging.info('sending the downloaded report to AA server')
-        send_to_sftpserver(request)
-    except TimeoutError as e:
-        logging.error('AA server is not connectable!')
-        send_via_mail(request)
-    except Exception as e:
-        logging.error(e)
+
+    if config.ENABLE_AA:
+        try:
+            logging.info('sending the downloaded report to AA server')
+            send_to_sftpserver(request)
+        except TimeoutError as e:
+            logging.error('AA server is not connectable!')
+            send_via_mail(request)
+        except Exception as e:
+            logging.error(e)
+            send_via_mail(request)
+    else:
         send_via_mail(request)
 
 if __name__ == '__main__':

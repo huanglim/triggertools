@@ -19,6 +19,7 @@ class Config(object):
     MAIL_SENDER = 'apdb2@au.ibm.com'
     MAIL_SUBJECT = 'Megabot report'
 
+    ENABLE_AA = False
     SFTP_HOSTIP = '9.112.56.150'
     SFTP_PORT = 22
     SFTP_USERNAME = 'tst'
