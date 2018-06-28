@@ -5,8 +5,6 @@ import paramiko
 sys.path.append(os.path.dirname(os.getcwd()))
 # from automation.config import HOSTNAME
 
-logging.basicConfig(level=logging.INFO)
-
 def send_to_sftpserver(request, dir=None):
         # setup a SSHClient object
     if not dir:
