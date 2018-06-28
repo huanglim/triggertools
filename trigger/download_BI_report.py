@@ -12,12 +12,7 @@ from selenium.common.exceptions import NoSuchElementException
 # Global Vars
 from configs import config
 
-logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s [line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%a, %d %b %Y %H:%M:%S',
-                    #filename='app.log',
-                    filemode='w'
-    )
+import logging
 
 def download_report(request,
                     dir_name,

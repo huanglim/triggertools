@@ -16,7 +16,7 @@ from email.mime.multipart import MIMEMultipart
 
 from configs import config
 
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s [line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%a, %d %b %Y %H:%M:%S',
                     #filename='app.log',
@@ -32,7 +32,7 @@ class MyRequest(object):
         self.msg = ''
 
 class Worker(Thread):
-    def __init__(self, func, in_queue, out_queue=None):
+    def __init__(self, func, in_queue, out_queue):
         """"""
         super().__init__()
         self.func = func
@@ -47,8 +47,7 @@ class Worker(Thread):
             except Exception as e:
                 logging.error(e)
             else:
-                if not self.out_queue:
-                    self.out_queue.put(result)
+                self.out_queue.put(result)
 
 def get_requests():
 
@@ -61,7 +60,7 @@ def get_requests():
         requests.extend(requests_sc)
         requests.extend(requests_rq)
     except Exception as e:
-        logging.error(e)
+        raise
     else:
         return requests
     finally:
@@ -99,6 +98,7 @@ def update_request(request):
     except Exception as e:
         logging.error('the process is failed, status is {}, msg is {}'\
                       .format(request.status, request.msg))
+        raise
     else:
         return request
     finally:
@@ -161,12 +161,12 @@ if __name__ == '__main__':
     get_request_queue = Queue()
     download_request_queue = Queue()
     update_request_queue = Queue()
-    # sendmail_queue = Queue()
+    sendmail_queue = Queue()
 
     threads = [
         Worker(download_request, get_request_queue, download_request_queue),
         Worker(update_request, download_request_queue, update_request_queue),
-        Worker(send_downloaded_file, update_request_queue),
+        Worker(send_downloaded_file, update_request_queue,sendmail_queue),
     ]
 
     for thread in threads:

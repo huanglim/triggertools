@@ -47,11 +47,11 @@ def send_to_sftpserver(request, dir=None):
 def mkdir(user):
     # make up the dirctory in selenium server to store the report for user
     # and return the dirctory name
-    logging.info('in make dir')
+    logging.debug('in make dir')
     dir_name = os.path.join(config.DEFAULT_DIR, user)
     if not os.path.exists(dir_name):
         output = os.popen('mkdir {}'.format(dir_name))
-        logging.info('create dir, the result is {}'.format(output))
+        logging.debug('create dir, the result is {}'.format(output.read()))
     return dir_name
 
 if __name__ == '__main__':
