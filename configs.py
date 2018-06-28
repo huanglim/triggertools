@@ -3,9 +3,8 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config(object):
 
-    IP = '9.110.24.227'
-    # IP = '9.112.56.150'
-    PORT = 4444
+    SELENIUM_SERVER_IP = '9.110.24.227'
+    SELENIUM_SERVER_PORT = 4444
     WAITSEC = 15
     IS_REMOTE = True
     IS_USER_NEEDED = True
@@ -19,6 +18,11 @@ class Config(object):
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'd25ml01.ibm.com')
     MAIL_SENDER = 'apdb2@au.ibm.com'
     MAIL_SUBJECT = 'Megabot report'
+
+    SFTP_HOSTIP = '9.112.56.150'
+    SFTP_PORT = 22
+    SFTP_USERNAME = 'tst'
+    SFTP_PASSWORD = 'tsttsttst'
 
     REQUEST_DBNAME = "megabot_request"
     USER_DBNAME = "megabot_user"

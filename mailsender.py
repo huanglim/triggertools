@@ -28,7 +28,6 @@ def send_mail(record):
 
 def trigger_mail():
 
-    logging.info('start func trigger_mail')
     # loop for checking remote
 
     db = Cloundant_NoSQL_DB()
@@ -56,6 +55,8 @@ def trigger_mail():
 
 
 if __name__ == "__main__":
+
+    logging.info('Program mailsender is started.')
 
     while True:
         try:

@@ -8,14 +8,9 @@ import functools
 import time, datetime
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select, WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
-
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 from exceptions.exceptions import InvalidCredentials, ReportCriteriaError
 
