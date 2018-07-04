@@ -19,5 +19,5 @@ dist
 *.pyc
 *.pyo
 *.tmp*
-__pycache__
-.idea
+__pycache__/
+.idea/
