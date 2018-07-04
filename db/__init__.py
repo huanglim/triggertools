@@ -16,7 +16,6 @@ class Cloundant_NoSQL_DB(object):
                                url=config.DB_URL)
         self.client.connect()
 
-
     def write_to_db(self,document,user=None):
         self.database = CloudantDatabase(self.client, config.REQUEST_DBNAME)
         append_info = {"user": user, "ctime": time.ctime()}
@@ -27,9 +26,10 @@ class Cloundant_NoSQL_DB(object):
 
     def query_request_db(self, query_status='submitted'):
         self.database = CloudantDatabase(self.client, config.REQUEST_DBNAME)
-        selector = {"status":{"$eq":query_status}}
+        selector = {
+            "status":{"$eq":query_status}
+        }
         return self.database.get_query_result(selector)
-
 
     def query_schedule_db(self, query_status='active'):
         self.database = CloudantDatabase(self.client, config.SCHEDULE_DBNAME)
@@ -84,21 +84,6 @@ class Cloundant_NoSQL_DB(object):
             new_start_date = old_start_date + relativedelta(months=1)
             new_end_date = old_end_date + relativedelta(months=1)
             new_run_date = datetime.today() + relativedelta(months=1)
-        #
-        # remote_doc.field_set(remote_doc,
-        #                      'Weekending Date Range Start date',
-        #                      new_start_date.strftime('%Y-%m-%d')
-        #                      )
-        #
-        # remote_doc.field_set(remote_doc,
-        #                      'Weekending Date Range End date',
-        #                      new_end_date.strftime('%Y-%m-%d')
-        #                      )
-        #
-        # remote_doc.field_set(remote_doc,
-        #                      'run date',
-        #                      new_run_date.strftime('%Y-%m-%d')
-        #                      )
 
         remote_doc.update_field(
             action=remote_doc.field_set,
@@ -124,6 +109,40 @@ class Cloundant_NoSQL_DB(object):
             value=datetime.today().strftime('%Y-%m-%d')
         )
 
+    def update_schedule_failure(self, doc):
+        self.database = CloudantDatabase(self.client, config.SCHEDULE_DBNAME)
+        remote_doc = Document(self.database, doc['_id'])
+        if remote_doc.get('failure_counts'):
+            count = str(int(remote_doc.get('failure counts')) + 1)
+        else:
+            count = '1'
+
+        if int(count) >= 3:
+            self.mark_schedule_status(doc)
+        else:
+            remote_doc.update_field(
+                action=remote_doc.field_set,
+                field='failure_counts',
+                value=count
+            )
+
+    def update_request_failure(self, doc):
+        self.database = CloudantDatabase(self.client, config.REQUEST_DBNAME)
+        remote_doc = Document(self.database, doc['_id'])
+        if remote_doc.get('failure_counts'):
+            count = str(int(remote_doc.get('failure counts')) + 1)
+        else:
+            count = '1'
+
+        if int(count) >=3:
+            self.mark_request_status(doc,to_status='failed')
+        else:
+            remote_doc.update_field(
+                action=remote_doc.field_set,
+                field='failure_counts',
+                value=count
+            )
+
     def mark_mail_status(self, doc, to_status='processed'):
         self.database = CloudantDatabase(self.client, config.MAIL_DBNAME)
         remote_doc = Document(self.database, doc['_id'])
@@ -144,4 +163,7 @@ class Cloundant_NoSQL_DB(object):
 
 if __name__ == '__main__':
     db = Cloundant_NoSQL_DB()
-    db.query_request_db()
+    res = db.query_schedule_db()
+
+    for r in res:
+        print(r)

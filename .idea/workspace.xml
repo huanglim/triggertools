@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57fe59df-4f59-4d04-87d8-e4200a5cdc02" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../megabot/app/templates/userinfo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/templates/userinfo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../megabot/app/db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/db/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../megabot/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/main/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../megabot/megabot.py" beforeDir="false" afterPath="$PROJECT_DIR$/../megabot/megabot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/db/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/downloader.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,55 +18,65 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mailsender.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mailsender.py">
+    <leaf>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="594">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="downloader.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/downloader.py">
+      <file leaf-file-name="1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../practise/testing/1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="110">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="megabot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../megabot/megabot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <element signature="e#727#861#0" />
-                <element signature="e#764#861#0" />
-                <element signature="e#889#1384#0" />
-                <element signature="e#949#1075#0" />
-                <element signature="e#1104#1384#0" />
-                <element signature="e#1128#1384#0" />
-                <element signature="e#1411#1793#0" />
-                <element signature="e#1491#1667#0" />
-                <element signature="e#1831#2335#0" />
-                <element signature="e#2094#2261#0" />
-                <element signature="e#2371#2888#0" />
-                <element signature="e#2453#2656#0" />
-                <element signature="e#2484#2656#0" />
-                <element signature="e#2634#2771#0" />
-                <element signature="e#2923#4284#0" />
-                <element signature="e#3427#4125#0" />
-                <element signature="e#3474#4125#0" />
-                <element signature="e#3537#4125#0" />
-                <element signature="e#4665#4692#0" />
-                <element signature="e#5037#5259#0" />
-                <element signature="e#5336#5621#0" />
-                <element signature="e#5465#5601#0" />
-                <element signature="e#5500#5601#0" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configs.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs.py">
+      <file leaf-file-name="downloader.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/downloader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="219">
+              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+              <folding>
+                <element signature="e#727#861#0" />
+                <element signature="e#764#861#0" />
+                <element signature="e#889#1336#0" />
+                <element signature="e#944#1070#0" />
+                <element signature="e#1099#1336#0" />
+                <element signature="e#1123#1336#0" />
+                <element signature="e#1772#2276#0" />
+                <element signature="e#2035#2202#0" />
+                <element signature="e#2312#2843#0" />
+                <element signature="e#2878#4239#0" />
+                <element signature="e#3382#4080#0" />
+                <element signature="e#3429#4080#0" />
+                <element signature="e#3492#4080#0" />
+                <element signature="e#4327#4425#0" />
+                <element signature="e#4472#4553#0" />
+                <element signature="e#4597#4648#0" />
+                <element signature="e#4723#4750#0" />
+                <element signature="e#5093#5330#0" />
+                <element signature="e#5407#5692#0" />
+                <element signature="e#5536#5672#0" />
+                <element signature="e#5571#5672#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,7 +101,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../megabot" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -101,36 +114,38 @@
         <option value="$PROJECT_DIR$/requirement.txt" />
         <option value="$PROJECT_DIR$/../megabot/automation/download_BI_report.py" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/_formhelper.html" />
-        <option value="$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html" />
         <option value="$PROJECT_DIR$/../megabot/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/task.html" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/404.html" />
-        <option value="$PROJECT_DIR$/../megabot/app/templates/edit_schedule.html" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/../../practise/testing/1.py" />
-        <option value="$PROJECT_DIR$/db/__init__.py" />
-        <option value="$PROJECT_DIR$/../megabot/app/main/forms.py" />
         <option value="$PROJECT_DIR$/../megabot/automation/requestsloader.py" />
         <option value="$PROJECT_DIR$/../megabot/app/utility.py" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/base.html" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/index.html" />
-        <option value="$PROJECT_DIR$/../megabot/app/db/__init__.py" />
         <option value="$PROJECT_DIR$/../megabot/app/templates/schedule.html" />
         <option value="$PROJECT_DIR$/../../practise/testing/cov_resume.py" />
         <option value="$PROJECT_DIR$/../../wex/docx2csv/docx2csv.py" />
         <option value="$PROJECT_DIR$/../../wex/docx2csv/.gitignore" />
         <option value="$PROJECT_DIR$/../megabot/app/static/js/megabot.js" />
         <option value="$PROJECT_DIR$/../megabot/app/main/views.py" />
-        <option value="$PROJECT_DIR$/../megabot/app/templates/userinfo.html" />
-        <option value="$PROJECT_DIR$/../megabot/megabot.py" />
         <option value="$PROJECT_DIR$/trigger/browserdriver.py" />
         <option value="$PROJECT_DIR$/utils/mk_dir.py" />
         <option value="$PROJECT_DIR$/mailsender.py" />
         <option value="$PROJECT_DIR$/utils/commands.py" />
         <option value="$PROJECT_DIR$/trigger/download_BI_report.py" />
         <option value="$PROJECT_DIR$/configs.py" />
+        <option value="$PROJECT_DIR$/../megabot/app/templates/edit_schedule.html" />
+        <option value="$PROJECT_DIR$/../megabot/app/templates/userinfo.html" />
+        <option value="$PROJECT_DIR$/../megabot/app/templates/confirm_access.html" />
+        <option value="$PROJECT_DIR$/../megabot/app/templates/edit_access.html" />
+        <option value="$PROJECT_DIR$/../megabot/app/main/forms.py" />
+        <option value="$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html" />
         <option value="$PROJECT_DIR$/downloader.py" />
+        <option value="$PROJECT_DIR$/../megabot/app/db/__init__.py" />
+        <option value="$PROJECT_DIR$/../megabot/megabot.py" />
+        <option value="$PROJECT_DIR$/../../practise/testing/1.py" />
+        <option value="$PROJECT_DIR$/db/__init__.py" />
       </list>
     </option>
   </component>
@@ -148,18 +163,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="trigger-tools" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trigger-tools" type="462c0819:PsiDirectoryNode" />
+              <item name="megabot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trigger-tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="megabot" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="trigger-tools" type="b2602c69:ProjectViewProjectNode" />
+              <item name="megabot" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -180,7 +206,43 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.downloader">
+  <component name="RunManager" selected="Python.1">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="testing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../practise/testing" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../practise/testing/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trigger-report" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/db" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/db/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="commands" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="trigger-report" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -194,42 +256,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/commands.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="cov_resume" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../practise/testing" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../practise/testing/cov_resume.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="docx2csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="testing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../wex/docx2csv" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../wex/docx2csv/docx2csv.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -273,18 +299,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.megabot" />
-      <item itemvalue="Python.cov_resume" />
-      <item itemvalue="Python.docx2csv" />
       <item itemvalue="Python.commands" />
       <item itemvalue="Python.downloader" />
+      <item itemvalue="Python.1" />
+      <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.megabot" />
         <item itemvalue="Python.downloader" />
         <item itemvalue="Python.commands" />
-        <item itemvalue="Python.megabot" />
-        <item itemvalue="Python.docx2csv" />
-        <item itemvalue="Python.cov_resume" />
       </list>
     </recent_temporary>
   </component>
@@ -305,13 +331,12 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18229167" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.3170068" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.3170068" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.3170068" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -322,6 +347,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292517" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -333,74 +359,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../megabot/app/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3718">
-          <caret line="169" column="22" lean-forward="true" selection-start-line="169" selection-start-column="22" selection-end-line="169" selection-end-column="22" />
-          <folding>
-            <element signature="e#875#1761#0" />
-            <element signature="e#904#905#0" />
-            <element signature="e#1818#2989#0" />
-            <element signature="e#1945#2821#0" />
-            <element signature="e#1962#2657#0" />
-            <element signature="e#2371#2410#0" />
-            <element signature="e#2744#2821#0" />
-            <element signature="e#2840#2989#0" />
-            <element signature="e#3053#3468#0" />
-            <element signature="e#3089#3384#0" />
-            <element signature="e#3106#3208#0" />
-            <element signature="e#3248#3384#0" />
-            <element signature="e#3546#4946#0" />
-            <element signature="e#3583#4898#0" />
-            <element signature="e#5064#6902#0" />
-            <element signature="e#5507#6812#0" />
-            <element signature="e#5619#6058#0" />
-            <element signature="e#5640#5822#0" />
-            <element signature="e#5914#6058#0" />
-            <element signature="e#6125#6564#0" />
-            <element signature="e#6146#6328#0" />
-            <element signature="e#6420#6564#0" />
-            <element signature="e#7582#7912#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirement.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/materialize-v1.0.0-beta/materialize/js/materialize.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="5" column="178992" lean-forward="true" selection-start-line="5" selection-start-column="178992" selection-end-line="5" selection-end-column="178992" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/automation/download_BI_report.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/wtforms/widgets/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/wtforms/fields/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="442" column="25" selection-start-line="442" selection-start-column="25" selection-end-line="442" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../megabot/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -415,38 +373,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../megabot/app/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../practise/testing/1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/main/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -505,38 +435,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../megabot/app/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/db/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3146">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/edit_schedule.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-572">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/edit_access.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="56" column="86" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="86" />
         </state>
       </provider>
     </entry>
@@ -610,76 +512,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/userinfo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="131" column="23" lean-forward="true" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/mk_dir.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/megabot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../megabot/app/main/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#875#1761#0" />
-            <element signature="e#904#905#0" />
-            <element signature="e#1818#2989#0" />
-            <element signature="e#1945#2821#0" />
-            <element signature="e#1962#2657#0" />
-            <element signature="e#2371#2410#0" />
-            <element signature="e#2744#2821#0" />
-            <element signature="e#2840#2989#0" />
-            <element signature="e#3053#3468#0" />
-            <element signature="e#3089#3384#0" />
-            <element signature="e#3106#3208#0" />
-            <element signature="e#3248#3384#0" />
-            <element signature="e#3546#4946#0" />
-            <element signature="e#3583#4898#0" />
-            <element signature="e#5064#6902#0" />
-            <element signature="e#5507#6812#0" />
-            <element signature="e#5619#6058#0" />
-            <element signature="e#5640#5822#0" />
-            <element signature="e#5914#6058#0" />
-            <element signature="e#6125#6564#0" />
-            <element signature="e#6146#6328#0" />
-            <element signature="e#6420#6564#0" />
-            <element signature="e#7582#7912#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mailsender.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mk_dir.py" />
     <entry file="file://$PROJECT_DIR$/trigger/requestsloader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-462">
           <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#25#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,61 +541,260 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trigger/browserdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1518">
-          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding>
-            <element signature="e#134#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/commands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="-1210">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailsender.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/edit_schedule.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trigger/browserdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
+          <folding>
+            <element signature="e#0#132#1" />
+            <element signature="e#535#814#0" />
+            <element signature="e#595#795#0" />
+            <element signature="e#1072#1387#0" />
+            <element signature="e#1422#3752#0" />
+            <element signature="e#1454#2837#0" />
+            <element signature="e#1503#2099#0" />
+            <element signature="e#1560#1598#0" />
+            <element signature="e#1752#1859#0" />
+            <element signature="e#2164#2698#0" />
+            <element signature="e#2733#2837#0" />
+            <element signature="e#2864#3732#0" />
+            <element signature="e#2913#3732#0" />
+            <element signature="e#2970#3008#0" />
+            <element signature="e#3162#3270#0" />
+            <element signature="e#3386#3667#0" />
+            <element signature="e#3807#3825#0" />
+            <element signature="e#3884#5687#0" />
+            <element signature="e#3901#4078#0" />
+            <element signature="e#4154#4686#0" />
+            <element signature="e#4763#5687#0" />
+            <element signature="e#4784#4917#0" />
+            <element signature="e#5150#5314#0" />
+            <element signature="e#5507#5587#0" />
+            <element signature="e#5746#6102#0" />
+            <element signature="e#6170#6524#0" />
+            <element signature="e#6592#6938#0" />
+            <element signature="e#7000#7347#0" />
+            <element signature="e#7416#7486#0" />
+            <element signature="e#7545#7804#0" />
+            <element signature="e#7624#7661#0" />
+            <element signature="e#8178#8370#0" />
+            <element signature="e#8412#8442#0" />
+            <element signature="e#8484#8514#0" />
+            <element signature="e#8555#8585#0" />
+            <element signature="e#8632#8662#0" />
+            <element signature="e#8719#9078#0" />
+            <element signature="e#8929#9078#0" />
+            <element signature="e#8943#9039#0" />
+            <element signature="e#9141#9202#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/main/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="232" lean-forward="true" selection-start-line="232" selection-end-line="232" />
+          <folding>
+            <element signature="e#875#1761#0" />
+            <element signature="e#904#905#0" />
+            <element signature="e#1818#2989#0" />
+            <element signature="e#1945#2821#0" />
+            <element signature="e#1962#2657#0" />
+            <element signature="e#2371#2410#0" />
+            <element signature="e#2744#2821#0" />
+            <element signature="e#2840#2989#0" />
+            <element signature="e#3053#3468#0" />
+            <element signature="e#3089#3384#0" />
+            <element signature="e#3106#3208#0" />
+            <element signature="e#3248#3384#0" />
+            <element signature="e#3546#4946#0" />
+            <element signature="e#5064#6902#0" />
+            <element signature="e#5507#6812#0" />
+            <element signature="e#5619#6058#0" />
+            <element signature="e#5640#5822#0" />
+            <element signature="e#5914#6058#0" />
+            <element signature="e#6125#6564#0" />
+            <element signature="e#6146#6328#0" />
+            <element signature="e#6420#6564#0" />
+            <element signature="e#6956#7102#0" />
+            <element signature="e#7180#7442#0" />
+            <element signature="e#7522#7785#0" />
+            <element signature="e#7864#8194#0" />
+            <element signature="e#8265#8595#0" />
+            <element signature="e#10635#11179#0" />
+            <element signature="e#11287#16130#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/selenium/webdriver/support/wait.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/1931522734/win32gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="625" lean-forward="true" selection-start-line="625" selection-end-line="625" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/edit_access.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+          <folding>
+            <element signature="n#form#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/confirm_access.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/userinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1078">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/templates/_formhelpers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/main/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="58" column="26" lean-forward="true" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../practise/testing/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/app/db/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1086">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/downloader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="219">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding>
             <element signature="e#727#861#0" />
             <element signature="e#764#861#0" />
-            <element signature="e#889#1384#0" />
-            <element signature="e#949#1075#0" />
-            <element signature="e#1104#1384#0" />
-            <element signature="e#1128#1384#0" />
-            <element signature="e#1411#1793#0" />
-            <element signature="e#1491#1667#0" />
-            <element signature="e#1831#2335#0" />
-            <element signature="e#2094#2261#0" />
-            <element signature="e#2371#2888#0" />
-            <element signature="e#2453#2656#0" />
-            <element signature="e#2484#2656#0" />
-            <element signature="e#2634#2771#0" />
-            <element signature="e#2923#4284#0" />
-            <element signature="e#3427#4125#0" />
-            <element signature="e#3474#4125#0" />
-            <element signature="e#3537#4125#0" />
-            <element signature="e#4665#4692#0" />
-            <element signature="e#5037#5259#0" />
-            <element signature="e#5336#5621#0" />
-            <element signature="e#5465#5601#0" />
-            <element signature="e#5500#5601#0" />
+            <element signature="e#889#1336#0" />
+            <element signature="e#944#1070#0" />
+            <element signature="e#1099#1336#0" />
+            <element signature="e#1123#1336#0" />
+            <element signature="e#1772#2276#0" />
+            <element signature="e#2035#2202#0" />
+            <element signature="e#2312#2843#0" />
+            <element signature="e#2878#4239#0" />
+            <element signature="e#3382#4080#0" />
+            <element signature="e#3429#4080#0" />
+            <element signature="e#3492#4080#0" />
+            <element signature="e#4327#4425#0" />
+            <element signature="e#4472#4553#0" />
+            <element signature="e#4597#4648#0" />
+            <element signature="e#4723#4750#0" />
+            <element signature="e#5093#5330#0" />
+            <element signature="e#5407#5692#0" />
+            <element signature="e#5536#5672#0" />
+            <element signature="e#5571#5672#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../megabot/megabot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

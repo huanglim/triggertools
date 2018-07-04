@@ -95,6 +95,11 @@ def update_request(request):
                 db.update_schedule_task(request.request)
             else:
                 db.mark_request_status(request.request)
+        else:
+            if request.request.get('schedule cycle'):
+                db.update_schedule_failure(request.request)
+            else:
+                db.update_request_failure(request.request)
     except Exception as e:
         logging.error('the process is failed, status is {}, msg is {}'\
                       .format(request.status, request.msg))
@@ -141,7 +146,7 @@ def send_via_mail(request):
 
 def send_downloaded_file(request):
 
-    if config.ENABLE_AA:
+    if config.ENABLE_AA and request.status:
         try:
             logging.info('sending the downloaded report to AA server')
             send_to_sftpserver(request)
@@ -151,7 +156,7 @@ def send_downloaded_file(request):
         except Exception as e:
             logging.error(e)
             send_via_mail(request)
-    else:
+    elif request.status:
         send_via_mail(request)
 
 if __name__ == '__main__':
