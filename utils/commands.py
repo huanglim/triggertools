@@ -7,8 +7,9 @@ sys.path.append(os.path.dirname(os.getcwd()))
 
 def send_to_sftpserver(request, dir=None):
         # setup a SSHClient object
+    user = request.request['user']
     if not dir:
-        dir = os.path.join(config.DEFAULT_DIR, request.request['user'])
+        dir = os.path.join(config.DEFAULT_DIR, user)
 
     ssh = paramiko.SSHClient()
 
@@ -38,15 +39,23 @@ def send_to_sftpserver(request, dir=None):
     #     sftp = paramiko.SFTPClient.from_transport(ssh)
 
     for file in os.listdir(dir):
-        if file.endswith('.py'):
+        if file.endswith('.csv'):
             try:
                 remote_dir = os.path.join(config.SFTP_DIR, file)
-                res = sftp.put(file, remote_dir)
+                new_file_name = '{}_{}'.format(user, file)
+                try:
+                    os.rename(os.path.join(dir,file), os.path.join(dir, new_file_name))
+                except Exception as e:
+                    logging.error('rename error')
+                    raise
+                else:
+                    local_file = os.path.join(dir, new_file_name)
+                    sftp.put(local_file, remote_dir)
             except Exception as e:
                 raise
             else:
-                logging.info('process for file {}'.format(os.path.join(dir, file)))
-                os.remove(os.path.join(dir, file))
+                logging.info('process for file {}'.format(os.path.join(dir, new_file_name)))
+                os.remove(os.path.join(dir, new_file_name))
 
     ssh.close()
 
