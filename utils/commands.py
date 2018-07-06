@@ -12,33 +12,41 @@ def send_to_sftpserver(request, dir=None):
 
     ssh = paramiko.SSHClient()
 
-    # 允许将信任的主机自动加入到host_allow 列表，此方法必须放在connect方法的前面
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    # connect to host
-    try:
-        ssh.connect(hostname=config.SFTP_HOSTIP,
-                    port=config.SFTP_PORT,
-                    username=config.SFTP_USERNAME,
-                    password=config.SFTP_PASSWORD,
-                    timeout=15)
-    except Exception as e:
-        raise
-    else:
-        stdin, stdout, stderr = ssh.exec_command('ls')
-        for line in stdout:
-            print('stdout',line)
 
-        for line in stderr:
-            print('stderr',line)
-        sftp = paramiko.SFTPClient.from_transport(ssh)
+    t = paramiko.Transport((config.SFTP_HOSTIP, config.SFTP_PORT))
+    t.connect(username=config.SFTP_USERNAME, password=config.SFTP_PASSWORD)
+    sftp = paramiko.SFTPClient.from_transport(t)
+    #
+    # # 允许将信任的主机自动加入到host_allow 列表，此方法必须放在connect方法的前面
+    # ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    # # connect to host
+    # try:
+    #     ssh.connect(hostname=config.SFTP_HOSTIP,
+    #                 port=config.SFTP_PORT,
+    #                 username=config.SFTP_USERNAME,
+    #                 password=config.SFTP_PASSWORD,
+    #                 timeout=15)
+    # except Exception as e:
+    #     raise
+    # else:
+    #     stdin, stdout, stderr = ssh.exec_command('ls')
+    #     for line in stdout:
+    #         print('stdout',line)
+    #
+    #     for line in stderr:
+    #         print('stderr',line)
+    #     sftp = paramiko.SFTPClient.from_transport(ssh)
 
     for file in os.listdir(dir):
-        try:
-            sftp.put(file)
-        except Exception as e:
-            raise
-        else:
-            os.remove(os.path.join(dir, file))
+        if file.endswith('.py'):
+            try:
+                remote_dir = os.path.join(config.SFTP_DIR, file)
+                res = sftp.put(file, remote_dir)
+            except Exception as e:
+                raise
+            else:
+                logging.info('process for file {}'.format(os.path.join(dir, file)))
+                os.remove(os.path.join(dir, file))
 
     ssh.close()
 

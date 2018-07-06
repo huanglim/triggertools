@@ -19,11 +19,12 @@ class Config(object):
     MAIL_SENDER = 'apdb2@au.ibm.com'
     MAIL_SUBJECT = 'Megabot report'
 
-    ENABLE_AA = False
-    SFTP_HOSTIP = '9.112.56.150'
+    ENABLE_AA = True
+    SFTP_HOSTIP = '9.112.56.44'
     SFTP_PORT = 22
-    SFTP_USERNAME = 'tst'
-    SFTP_PASSWORD = 'tsttsttst'
+    SFTP_USERNAME = 'manny'
+    SFTP_PASSWORD = '56ytty65'
+    SFTP_DIR = '/home/manny/tst/SourceFile'
 
     REQUEST_DBNAME = "megabot_request"
     USER_DBNAME = "megabot_user"
