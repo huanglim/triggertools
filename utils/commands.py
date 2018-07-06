@@ -41,7 +41,6 @@ def send_to_sftpserver(request, dir=None):
     for file in os.listdir(dir):
         if file.endswith('.csv'):
             try:
-                remote_dir = os.path.join(config.SFTP_DIR, file)
                 new_file_name = '{}_{}'.format(user, file)
                 try:
                     os.rename(os.path.join(dir,file), os.path.join(dir, new_file_name))
@@ -50,6 +49,7 @@ def send_to_sftpserver(request, dir=None):
                     raise
                 else:
                     local_file = os.path.join(dir, new_file_name)
+                    remote_dir = os.path.join(config.SFTP_DIR, new_file_name)
                     sftp.put(local_file, remote_dir)
             except Exception as e:
                 raise
